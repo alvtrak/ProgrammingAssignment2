@@ -1,14 +1,10 @@
 ##alvtrak
-##Coursera
-##21/March/2015
+##Coursera rprog-013
+##24/April/2015
 ##Assigment 2
 
 
-## Put comments here that give an overall description of what your
-## functions do
-
-## Write a short comment describing this function
-## "This function creates a special "matrix" object that can cache its inverse"
+## "This function creates a special "matrix" object that can cache its inverse
 ## I have used the example given for mean and make changes to cater for inverseMatrix
 ## where the inverseMatrix of X is stored
 makeCacheMatrix <- function(x = matrix()) {
@@ -28,9 +24,10 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
 ## This function computes the inverse of the special "matrix" returned 
-## by makeCacheMatrix above. If the inverse has already been calculated (and the matrix has not changed), then the cachesolve should retrieve the inverse from the cache
+## by makeCacheMatrix above. If the inverse has already been calculated 
+##(and the matrix has not changed), then the cachesolve should retrieve 
+## the inverse from the cache
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
         
@@ -40,7 +37,7 @@ cacheSolve <- function(x, ...) {
                 return(im)
         }
         data <- x$get()
-        ##caclulate the inverse matrix
+        ##calculate the inverse matrix
         im <-solve(data) %*% data
         x$setInverseMatrix(im)
         im        
